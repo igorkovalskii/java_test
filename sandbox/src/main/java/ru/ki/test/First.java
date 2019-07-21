@@ -8,19 +8,18 @@ public class First {
     hello("world");
     hello("user");
     hello("admin");
-    double len = 5;
-    out.println("Площадь квадрата со стосроной " + len + " ровняется " + area(len) );
-    double a = 4;
-    double b = 6;
-    out.println("Площадь со стосронами " + a + " и " + b + " = " + area(a, b));
+    Square s = new Square(5);
+    out.println("Площадь квадрата со стосроной " + s.l + " ровняется " + area(s));
+    Rectangle r = new Rectangle(4, 6);
+    out.println("Площадь со стосронами " + r.a + " и " + r.b + " = " + area(r));
   }
   public static void  hello (String somebody){
     out.println("Hello " + somebody + "!");
   }
-  public static double area(double l){
-   return l*l;
+  public static double area(Square s){
+   return s.l*s.l;
   }
-  public static double area (double a, double b){
-    return a*b;
+  public static double area ( Rectangle r){
+    return r.a*r.b;
   }
 }
